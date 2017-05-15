@@ -10,7 +10,7 @@ pip install beautifulsoup4<br>
 
 2.下载<br>
 wget  -O  /tmp/locCheckin.py https://raw.githubusercontent.com/YouBubedu/ubedu/master/locCheckin.py<br>
-修改用户名和密码<br>
+vi locCheckin.py 修改用户名和密码<br>
 利用crontab 加入定时任务中<br>
 yum install cron<br>
 crontab -e<br>
