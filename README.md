@@ -3,9 +3,9 @@ some auto run
 <h1>一.locCheckin</h1></br>
 1.VPS安装如下内容<br>
 yum -y install python-pip<br>
-yum install requests<br>
-yum install beautifulsoup4<br>
-#yum install lxml<br>
+pip install requests<br>
+pip install beautifulsoup4<br>
+#pip install lxml<br>
 
 
 2.下载<br>
