@@ -1,2 +1,17 @@
 # ubedu
 some auto run
+<h1>一.locCheckin</h1></br>
+1.VPS安装如下内容<br>
+yum -y install python-pip<br>
+yum install requests<br>
+yum install beautifulsoup4<br>
+#yum install lxml<br>
+
+
+2.下载<br>
+wget  -O  /tmp/hostloc.py https://raw.githubusercontent.com/YouBubedu/ubedu/master/locCheckin.py<br>
+修改用户名和密码<br>
+利用crontab 加入定时任务中<br>
+yum install cron<br>
+crontab -e<br>
+0 */8 * * * python /tmp/locCheckin.py<br>
