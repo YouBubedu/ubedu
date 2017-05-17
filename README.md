@@ -18,3 +18,7 @@ crontab -e<br>
 
 
 <h3>fork from challengeYY</h3></br>
+
+
+<h1>二.Vagex-Firefox</h1>
+wget -N --no-check-certificate https://raw.githubusercontent.com/YouBubedu/ubedu/master/Vagex-Firefox.sh && chmod +x Vagex-Firefox.sh && bash Vagex-Firefox.sh
