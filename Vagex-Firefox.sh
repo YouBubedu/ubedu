@@ -51,11 +51,11 @@ echo  "15 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/
 echo  "16 * * * * killall -9 firefox > /dev/null 2>&1"  >> /var/spool/cron/root
 echo  "17 * * * * export DISPLAY=:1;firefox > /dev/null 2>&1"  >> /var/spool/cron/root
 echo  "30 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/root
-echo  "31 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/root
-echo  "32 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/root
+echo  "31 * * * * killall -9 firefox > /dev/null 2>&1"  >> /var/spool/cron/root
+echo  "32 * * * * export DISPLAY=:1;firefox > /dev/null 2>&1"  >> /var/spool/cron/root
 echo  "45 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/root
-echo  "46 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/root
-echo  "47 * * * * rm -rf /root/.vnc/*.log > /dev/null 2>&1"  >> /var/spool/cron/root
+echo  "46 * * * * killall -9 firefox > /dev/null 2>&1"  >> /var/spool/cron/root
+echo  "47 * * * * export DISPLAY=:1;firefox > /dev/null 2>&1"  >> /var/spool/cron/root
 
 echo -e "------------------\e[1;41m系统将会在20s后自动重启\e[0m--------------------------"
 echo "------------------待重启完成后启动VNC软件--------------------------"
