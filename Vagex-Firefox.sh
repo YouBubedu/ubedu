@@ -7,6 +7,7 @@ echo "---------------------联系QQ:3139406358-----------------------"
 echo -e "--------------个人网站：\e[1;42mhttps://www.ubedu.site\e[0m---------------"
 echo "---------------------脚本将会在3s后执行----------------------"
 sleep 3s
+yum update -y
 #512M的小鸡增加1G的Swap分区
 dd if=/dev/zero of=/var/swap bs=1024 count=1048576
 mkswap /var/swap
