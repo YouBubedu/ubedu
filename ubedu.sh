@@ -10,6 +10,12 @@ sleep 3s
 
 #系统更新
 yum update -y
+echo -e "Do you want to update?[y/n]:\c"
+read updateor
+if [ "$updateor" = "y" ]
+then
+yum update -y
+fi
 
 #修改root登陆端口
 lport=`netstat -antp | grep sshd| awk -F ":" '{print $4}' | awk '{if($0 !~/^$/)print $0}'`
@@ -48,6 +54,22 @@ else
 sed -i '$a\net.ipv4.icmp_echo_ignore_all=0' /etc/sysctl.conf
 sysctl -p
 fi
+
+#增加Swap内存
+echo -e "Do you want to add Swap?[y/n]:\c"
+read addswapor
+if [ "$addswapor" = "y" ]
+then
+echo -e "Please Input the Swap Size (unit:Gb default:1):\c"
+read swapsize
+dd if=/dev/zero of=/var/swap bs=1024 count=$[$swapsize * 1024000]
+mkswap /var/swap
+chmod 0644 /var/swap
+swapon /var/swap
+echo '/var/swap   swap   swap   default 0 0' >> /etc/fstab
+fi
+free -m
+sleep 3s
 echo -e "------------------欢迎使用ubedu综合配置脚本------------------"
 echo -e "----------------此脚本适用于CentOS6 64位系统-----------------"
 echo -e "----------------------脚本作者：YouB-------------------------"
