@@ -9,7 +9,6 @@ echo -e "---------------------脚本将会在3s后执行----------------------"
 sleep 3s
 
 #系统更新
-yum update -y
 echo -e "Do you want to update?[y/n]:\c"
 read updateor
 if [ "$updateor" = "y" ]
